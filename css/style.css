@@ -3,7 +3,7 @@ body {
 	margin: 0;
 	background: #1a1a1a;
 	color: white;
-	font-family: arial;
+	font-family: comfortaa, arial;
 }
 
 * {
@@ -18,6 +18,12 @@ body {
 .wrapper {
 	min-height: 100%;
 	height: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.hero {
+	min-height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -119,4 +125,74 @@ body {
 	width: 100%;
 	height: 20%;
 	background-repeat: no-repeat;
+}
+
+.footer {
+	background: black;
+	padding: 2.6vw;
+}
+
+.footer__content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0 .8vw;
+}
+
+.footer__content-text {
+	color: white;
+	font-size: 2.2vw;
+	animation: text 4s infinite;
+	letter-spacing: .02009vw;
+}
+
+@keyframes text{
+	0%,100%{
+		text-shadow: 2.5px 2.5px 2px white;
+	}
+	2%{
+		text-shadow: -18px -8px 2px white;
+	}
+	3%{
+		text-shadow: 8px -5px 2px white;
+	}
+	4%{
+		text-shadow: -12px -8px 2px white;
+	}
+	5%{
+		text-shadow: 10px -4px 2px white;
+	}
+	6%{
+		text-shadow: -10px -8px 2px white;
+	}
+	7%{
+		text-shadow: -3px -3px 2px white;
+	}
+}
+
+.footer__content-block {
+	width: 4.2vw;
+	height: 4.2vw;
+	box-shadow: 0 0 .1vw white;
+	border-radius: 100%;
+	animation: dragon 4s infinite;
+}
+
+@keyframes dragon{
+	0%,100%{
+		box-shadow: 0 0 .5vw white;
+	}
+	50%{
+		box-shadow: 0 0 0;
+	}
+}
+
+.footer__content-block-img {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+}
+
+::-webkit-scrollbar {
+	width: 0;
 }
