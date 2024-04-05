@@ -136,7 +136,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 0 .8vw;
+	gap: 0 1vw;
 }
 
 .footer__content-text {
