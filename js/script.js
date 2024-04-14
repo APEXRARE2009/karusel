@@ -35,10 +35,25 @@ function toggleIndexer() {
     })
 }
 
+function targetIndexer() {
+    afterBlock.addEventListener("click", (event) => {
+        let targetIndex = event.target;
+        afterBlockIndex.map((indexer) => {
+            indexer.classList.remove("main__content-after-block-indexer-active")
+            if (targetIndex == indexer) {
+                indexer.classList.add("main__content-after-block-indexer-active")
+                i = indexer.id
+                img.src = links[i];
+            }
+        })
+    })
+}
+
 function toggleLink() {
+    targetIndexer()
+    toggleIndexer()
     console.log(i);
     img.src = links[i];
-    toggleIndexer()
 }
 
 toggleLink()
