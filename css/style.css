@@ -196,3 +196,33 @@ body {
 ::-webkit-scrollbar {
 	width: 0;
 }
+
+.main__content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 2vw 0;
+}
+
+.main__content-after-block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0 1.5vw;
+}
+
+.main__content-after-block-indexer {
+	width: 1.5vw;
+	height: 1.5vw;
+	border-radius: 100%;
+	box-shadow: 0 0 .5vw black inset;
+	border: .4vw solid rgba(0, 0, 0, .2);
+	box-sizing: content-box;
+	transition: .5s;
+}
+
+.main__content-after-block-indexer-active {
+	border: .25vw solid #ff00aa;
+	box-shadow: 0 0 .5vw black inset, 0 0 .5vw #ff00aa;
+}
