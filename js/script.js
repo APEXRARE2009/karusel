@@ -32,6 +32,8 @@ function toggleIndexer() {
         indexer.classList.remove("main__content-after-block-indexer-active")
         if (indexer.id == i) {
             indexer.classList.add("main__content-after-block-indexer-active")
+                img.src = links[i];
+
         }
     })
 }
@@ -50,8 +52,9 @@ function targetIndexer() {
     })
 }
 
+targetIndexer()
+
 function toggleLink() {
-    targetIndexer()
     toggleIndexer()
     console.log(i);
     img.src = links[i];
