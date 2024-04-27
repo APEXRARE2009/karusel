@@ -59,8 +59,7 @@ function toggleIndexer() {
         indexer.classList.remove("main__content-after-block-indexer-active")
         if (indexer.id == i) {
             indexer.classList.add("main__content-after-block-indexer-active")
-                img.src = links[i];
-
+            img.src = links[i];
         }
     })
 }
@@ -68,14 +67,16 @@ function toggleIndexer() {
 function targetIndexer() {
     afterBlock.addEventListener("click", (event) => {
         let targetIndex = event.target;
-        afterBlockIndex.map((indexer) => {
-            indexer.classList.remove("main__content-after-block-indexer-active")
-            if (targetIndex == indexer) {
-                indexer.classList.add("main__content-after-block-indexer-active")
-                i = indexer.id
-                img.src = links[i];
-            }
-        })
+        if (targetIndex.classList.contains("main__content-after-block-indexer")) {
+            afterBlockIndex.map((indexer) => {
+                indexer.classList.remove("main__content-after-block-indexer-active")
+                if (targetIndex == indexer) {
+                    indexer.classList.add("main__content-after-block-indexer-active")
+                    i = indexer.id
+                    img.src = links[i];
+                }
+            })
+        }
     })
 }
 
